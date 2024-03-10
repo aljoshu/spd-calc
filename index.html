@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPD Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Intro&display=swap">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-900"> <!-- Updated background color -->
+    <header class="header-bg text-white py-4 text-center"> <!-- Added header-bg class -->
+        <h1 class="text-4xl font-bold">SPD Calculator</h1>
+        <!-- Add any additional header content here -->
+    </header>
+    <div class="container mx-auto px-4 mt-8">
+        <!-- Form Card -->
+        <form id="myForm" class="bg-gray-800 rounded-lg shadow-md p-6 mb-8"> <!-- Updated background color -->
+            <!-- Turns -->
+            <label for="turnInput" class="block mb-2"><i class="fa-solid fa-circle-notch fa-spin text-blue-500"></i> How many turns:</label> <!-- Updated icon color -->
+            <input type="text" id="turnInput" name="turnInput" list="turnOptions"
+                class="border border-gray-300 rounded-md py-2 px-3 mb-4 w-full">
+            <!-- Error message for turns -->
+            <p id="turnError" class="text-red-500 hidden">Turns must be an integer.</p>
+            <datalist id="turnOptions">
+                <option value="1">1 turn(s)</option>
+                <option value="2">2 turn(s)</option>
+                <option value="3">3 turn(s)</option>
+                <option value="4">4 turn(s)</option>
+                <option value="5">5 turn(s)</option>
+                <option value="6">6 turn(s)</option>
+                <option value="7">7 turn(s)</option>
+                <option value="8">8 turn(s)</option>
+                <option value="9">9 turn(s)</option>
+                <option value="10">10 turn(s)</option>
+            </datalist>
+            <!-- Cycles -->
+            <label for="cycleInput" class="block mb-2"><i class="fa-solid fa-sync fa-spin text-purple-500"></i> How many cycles:</label> <!-- Updated icon color -->
+            <input type="text" id="cycleInput" name="cycleInput" list="cycleOptions"
+                class="border border-gray-300 rounded-md py-2 px-3 mb-4 w-full">
+            <!-- Error message for cycles -->
+            <p id="cycleError" class="text-red-500 hidden">Cycles must be an integer.</p>
+            <datalist id="cycleOptions">
+                <option value="1">1 cycle(s)</option>
+                <option value="2">2 cycle(s)</option>
+                <option value="3">3 cycle(s)</option>
+                <option value="4">4 cycle(s)</option>
+                <option value="5">5 cycle(s)</option>
+                <option value="6">6 cycle(s)</option>
+                <option value="7">7 cycle(s)</option>
+                <option value="8">8 cycle(s)</option>
+                <option value="9">9 cycle(s)</option>
+                <option value="10">10 cycle(s)</option>
+            </datalist>
+            <!-- Mods/Misc -->
+            <div class="mb-4">
+                <span class="block font-medium mb-1">Mods:</span>
+                <input type="checkbox" id="vonwacq" name="vonwacq" class="mr-2">
+                <label for="vonwacq" class="mr-4"><img src="/img/vonwacq.png" alt="Vonwacq" class="icon-img">Vonwacq</label>
+                <input type="checkbox" id="hsBronya" name="hsBronya" class="mr-2">
+                <label for="hsBronya" class="mr-4"><img src="/img/bronya.png" alt="Bronya" class="icon-img">Hyperspeed Bronya (level 10 talent)</label>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Submit</button>
+        </form>
+
+        <!-- Result Card -->
+        <div id="result" class="bg-gray-800 rounded-lg shadow-md p-6"></div> <!-- Updated background color -->
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="/js/functions.js"></script>
+</body>
+</html>

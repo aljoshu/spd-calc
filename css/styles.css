@@ -1,0 +1,37 @@
+body {
+  font-family: 'Intro', sans-serif;
+  background-image: url('/img/black-swan.png') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.header-bg {
+  background-color: #1E1E1E; /* Dark background color */
+}
+
+.icon-img {
+  height: 20px; /* Adjusted height */
+  width: auto;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+input[type="text"] {
+  background-color: #1E1E1E; /* Change to the desired background color */
+  color: white; /* Change the text color to white */
+  /* Add any other styles as needed */
+}
+
+input[type="checkbox"] {
+  margin-right: 8px; /* Adjust margin for checkbox */
+}
+
+#result {
+  font-size: 1.3rem; /* Adjust the font size as needed */
+}
